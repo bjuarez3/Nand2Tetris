@@ -31,3 +31,5 @@ CHIP Register {
     Bit(in = in[14], load = load, out = out[14]);
     Bit(in = in[15], load = load, out = out[15]); 
 }
+
+/* Apply a Bit gate to each bit in sixteen bit input bus */

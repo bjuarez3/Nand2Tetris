@@ -19,4 +19,4 @@ CHIP Bit {
 }
 
 /* Set a Mux to output the desired bit, being the last bit in the DFF or the input bit
-   The DFF will talke this as input and output it in the next integer time value */
+   The DFF will take this as input and output it in the next integer time value */

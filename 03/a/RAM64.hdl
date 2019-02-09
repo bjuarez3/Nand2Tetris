@@ -15,5 +15,18 @@ CHIP RAM64 {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+        DMux8Way(in = load, sel= address[3..5], a = firstRam8Load, b = secondRam8Load, c = thirdRam8Load, d = fourthRam8Load, e = fifthRam8Load, f = sixthRam8Load, g = seventhRam8Load, h = eighthRam8Load);
+        RAM8(in = in, load = firstRam8Load, address = address[0..2], out = firstRam8Out);
+        RAM8(in = in, load = secondRam8Load, address = address[0..2], out = secondRam8Out);
+        RAM8(in = in, load = thirdRam8Load , address = address[0..2], out = thirdRam8Out);
+        RAM8(in = in, load = fourthRam8Load, address = address[0..2], out = fourthRam8Out);
+        RAM8(in = in, load = fifthRam8Load, address = address[0..2], out = fifthRam8Out);
+        RAM8(in = in, load = sixthRam8Load, address = address[0..2], out = sixthRam8Out);
+        RAM8(in = in, load = seventhRam8Load, address = address[0..2], out = seventhRam8Out);
+        RAM8(in = in, load = eighthRam8Load, address = address[0..2], out = eighthRam8Out);
+        Mux8Way16(a = firstRam8Out, b = secondRam8Out, c = thirdRam8Out, d = fourthRam8Out, e = fifthRam8Out, f = sixthRam8Out, g = seventhRam8Out, h = eighthRam8Out, sel = address[3..5], out = out);
 }
+/* Send the selection bit to one of the eight * register RAMS in the chip, determined by the three most significant bits of the address.
+   Every 8 register RAM takes the sixteen bit input bus but only uses the value in the load bit is 1.
+   If the load value is one, the value at that register is updated with the input value.
+   This chip outputs the current value of the register at the specified address */
