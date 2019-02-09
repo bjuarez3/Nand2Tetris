@@ -15,3 +15,7 @@ CHIP Inc16 {
     PARTS:
     Add16(a[1..15] = false, a[0] = true, b = in, out = out);
 }
+
+/*set the 15 most significant bits of the first operand to be false (0)
+ set the least significant digit to be true (1)
+ add this multi-bit  bus to the input */

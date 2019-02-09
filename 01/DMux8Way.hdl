@@ -20,3 +20,7 @@ CHIP DMux8Way {
     DMux4Way(in = zero, sel = sel[0..1], a = a, b = b, c = c, d = d);
     DMux4Way(in = one, sel = sel[0..1], a = e, b = f, c = g, d = h);
 }
+
+/* Apply DMux gate to input using the most significant bit of the selector bus
+   This separates outputs a, b, c, d from outputs e, f, g, h,.
+   Then send input through two 4WayDMux gates to determine where the input will be send */

@@ -14,5 +14,9 @@ CHIP Bit {
     OUT out;
 
     PARTS:
-    // Put your code here:
+        Mux(a = DFFOut, b = in, sel = load, out = MuxOut);
+        DFF(in = MuxOut, out = DFFOut, out = out);
 }
+
+/* Set a Mux to output the desired bit, being the last bit in the DFF or the input bit
+   The DFF will talke this as input and output it in the next integer time value */

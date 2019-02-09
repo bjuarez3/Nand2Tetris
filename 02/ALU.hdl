@@ -58,3 +58,5 @@ CHIP ALU {
     Or(a = leftIsZero, b = rightIsZero, out = notZero); 
     Not(in = notZero, out = zr);
 } 
+
+/* Esta menos me la se */

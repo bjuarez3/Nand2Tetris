@@ -30,3 +30,6 @@ CHIP Add16 {
    FullAdder(a = carry14, b = a[14], c = b[14], sum = out[14], carry = carry15);
    FullAdder(a = carry15, b = a[15], c = b[15], sum = out[15], carry = nowhere);
 }
+
+/* Apply hald adder to the least significant bits of the two input buses to get the first sum and the first carry;
+   Then apply Full addeder to respective bits in buses and the carry of the precious addition */

@@ -19,3 +19,8 @@ CHIP DMux {
     And(a = in, b = notSel, out = a);
     And(a = in, b = sel, out = b);
 }
+
+/* Negate the selection bit 
+   Apply an And gate to the input bit and each one of the selection bits
+   If selection  bit is 0, it will be negated to 1; And gates will send output to a and 0 to b
+   If selection bit is 1, it will be negated to 0; And gates will send 0 to a and output to b */

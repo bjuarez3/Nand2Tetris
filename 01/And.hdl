@@ -17,3 +17,6 @@ CHIP And {
     Nand(a=a, b=b, out=nandout);
     Not(in=nandout, out=out);
 }
+
+/* Negate (a AND b), which is equal to (not a OR not b)
+   negate (not a OR not b), which is equal to (a AND b) */

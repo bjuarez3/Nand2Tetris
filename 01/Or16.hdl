@@ -31,3 +31,5 @@ CHIP Or16 {
     Or(a = a[14], b = b[14], out = out[14]);
     Or(a = a[15], b = b[15], out = out[15]);
 }
+
+/* Apply single bit Or gate to respective bits of sixteen bit input bus */

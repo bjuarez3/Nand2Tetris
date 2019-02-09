@@ -18,3 +18,6 @@ CHIP Or {
     Not(in=b, out=notb);
     Nand(a=nota, b=notb, out=out);
 }
+
+/* Negate a and b, then apply Nand to the negations
+   This results in not (not a AND not b), which is equal to (a or b) */

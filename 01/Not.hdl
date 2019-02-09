@@ -15,3 +15,6 @@ CHIP Not {
     PARTS:
     Nand(a=in, b=in, out=out);
 }
+
+/* Apply a Nand gate to the input, using the input as a and b
+Results in Not(A and A), which is Not A */

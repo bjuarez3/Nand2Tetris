@@ -16,3 +16,12 @@ CHIP HalfAdder {
     Xor(a = a, b = b, out = sum);
     And(a = a, b = b, out = carry);
 }
+
+/* Xor determines the sum.
+   If 0 + 0, sum is 0,
+   If 0 + 1 or 1 + 0, sum is 1,
+   If 1 + 1, sum is 0;
+   And determines the carry.
+   If 0 + 0, carry is 0,
+   If 0 + 1 or 1 + 0, carry is 0,
+   If 1 + 1, carry is 1*/

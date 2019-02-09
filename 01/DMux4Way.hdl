@@ -20,3 +20,12 @@ CHIP DMux4Way {
     DMux(in = zero, sel = sel[1], a = a, b = c);
     DMux(in = one, sel = sel[1], a = b, b = d);
 }
+
+/* Send the input to a DMux, with the output being determined by the least significant bit of the selection bus.
+   If the least significant bit is 0, the output of the first Mux will be sent to a second DMux.
+   In this DMux, if the most significant bit is 0, the input will be sent to 0;
+   If the bit is 1, it will be sent to c
+   If the least significant bit is 1, it will be sent to to a third DMux.
+   In this DMux, if the most significant digit is 0, the input will be sent to b;
+   If the bit is 1, it will be send to d
+*/

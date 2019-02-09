@@ -19,3 +19,7 @@ CHIP Xor {
     And(a=a, b=notb, out=anotb);
     Or(a=bnota, b=anotb, out=out);
 }
+
+/* Negate a and b,
+   If only one is true, then only one, (a AND not b) or (not a AND b) will be true
+   If both are true or false, (a AND not b) and (not a and b) will both be false */

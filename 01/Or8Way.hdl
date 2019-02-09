@@ -22,3 +22,6 @@ CHIP Or8Way {
     Or(a = or3, b = or4, out = or12);
     Or(a = or11, b = or12, out = out);
 }
+
+/* Apply Or gate to two distinct bits in 16 bit array 
+   Keep applying Or gates to all distinct results*/
